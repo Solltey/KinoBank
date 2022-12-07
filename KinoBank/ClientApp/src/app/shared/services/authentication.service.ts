@@ -33,7 +33,7 @@ export class AuthenticationService {
   }
 
   login(item: LoginRequest): Observable<LoginResult> {
-    var url = "https://localhost:44304/api/Account/Login";
+    var url = "https://" + window.location.host + "/api/Account/Login";
     return this.http.post<LoginResult>(url, item)
       .pipe(tap(loginResult => {
         if (loginResult.success && loginResult.token) {
@@ -44,7 +44,7 @@ export class AuthenticationService {
   }
 
   register(item: RegistrationRequest): Observable<RegistrationResult> {
-    var url = "https://localhost:44304/api/Account/Register";
+    var url = "https://" + window.location.host + "/api/Account/Register";
     return this.http.post<RegistrationResult>(url, item);
   }
 
