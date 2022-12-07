@@ -1,0 +1,172 @@
+header {
+  position: relative;
+  height: 40vh;
+}
+
+#header__bottom-shadow {
+  z-index: 4;
+  width: 100%;
+  height: 4.75vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-shadow: inset 27px 0px 42px 10px #000000;
+}
+
+/*---Header-Background-Video---*/
+
+.container-video {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+#myVideo {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 40vh;
+}
+
+#page-title {
+  cursor: default;
+  z-index: 2;
+  margin-bottom: 3vh;
+  opacity: .77;
+  font-family: Dancing Script;
+  color: var(--header-font-color);
+  font-size: 7.95rem;
+  font-weight: bold;
+  text-shadow: .05em .05em 0 #000000, -.06em -.0725em 0 rgba(21, 21, 21, .2), .06em .225em 0 rgba(28, 28, 28, .2);
+  animation: retroMovieffect 1500ms infinite;
+}
+
+  #page-title::selection {
+    background: transparent;
+  }
+
+  #page-title::-moz-selection {
+    background: transparent;
+  }
+
+@keyframes retroMovieffect {
+  0% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), -.06em -.0725em 0 rgba(66, 66, 66, .275), .06em .225em 0 rgba(66, 66, 66, .275);
+  }
+
+  13% {
+    color: rgba(230, 0, 46, .85);
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, .95), -.06em -.0725em 0 rgba(21, 21, 21, .05), .06em .225em 0 rgba(28, 28, 28, .01);
+  }
+
+  14% {
+    color: rgba(230, 0, 46, 1);
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), -.06em -.0725em 0 rgba(21, 21, 21, .01), .06em .225em 0 rgba(28, 28, 28, .01);
+  }
+
+  15% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .075em -.0725em 0 rgba(21, 21, 21, .275), -.06em -.225em 0 rgba(28, 28, 28, .275);
+  }
+
+  33% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .075em -.0725em 0 rgba(21, 21, 21, .01), -.06em -.225em 0 rgba(28, 28, 28, .01);
+  }
+
+  34% {
+    color: rgba(230, 0, 46, .95);
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, .55), .075em -.0725em 0 rgba(21, 21, 21, .01), -.06em -.225em 0 rgba(28, 28, 28, .01);
+  }
+
+  35% {
+    color: rgba(230, 0, 46, 1);
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .35em -.0725em 0 rgba(21, 21, 21, .275), -.25em .225em 0 rgba(28, 28, 28, .275);
+  }
+
+  49% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .35em -.0725em 0 rgba(21, 21, 21, .01), -.25em .225em 0 rgba(28, 28, 28, .01);
+  }
+
+  50% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .25em -.0255em 0 rgba(21, 21, 21, .2), .255em .125em 0 rgba(19, 19, 19, .2);
+  }
+
+  68% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .25em -.0255em 0 rgba(21, 21, 21, .01), .255em .125em 0 rgba(19, 19, 19, .01);
+  }
+
+  69% {
+    color: rgba(230, 0, 46, .85);
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, .95), .25em -.0255em 0 rgba(21, 21, 21, .01), .255em .125em 0 rgba(19, 19, 19, .01);
+  }
+
+  70% {
+    color: rgba(230, 0, 46, 1);
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .35em -.255em 0 rgba(21, 21, 21, .325), .355em .225em 0 rgba(19, 19, 19, .325);
+  }
+
+  83% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), .35em -.255em 0 rgba(21, 21, 21, .01), .355em .225em 0 rgba(19, 19, 19, .01);
+  }
+
+  84% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, .95), .35em -.255em 0 rgba(21, 21, 21, .01), .355em .225em 0 rgba(19, 19, 19, .01);
+  }
+
+  85% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), -.135em -.0325em 0 rgba(21, 21, 21, .275), .225em .225em 0 rgba(19, 19, 19, .275);
+  }
+
+  99% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), -.135em -.0325em 0 rgba(21, 21, 21, .01), .225em .225em 0 rgba(19, 19, 19, .01);
+  }
+
+  100% {
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 1), -.175em .105em 0 rgba(11, 11, 11, .325), .1755em -.105em 0 rgba(14, 14, 14, .325);
+  }
+}
+
+
+/*-----Main-Content-----*/
+
+
+
+main {
+  position: relative;
+}
+
+.content {
+  margin: 0 auto;
+  width: 85vw;
+  padding-bottom: 20px;
+}
+/*---Main-Content-Section-Header---*/
+
+.content__section-header {
+  margin-top: 2.25rem;
+  font-weight: 600;
+  width: 65%;
+  font-size: 1rem;
+  font-family: 'Cinzel';
+  color: var(--header-font-color);
+}
+
+  .content__section-header:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, #e6002e, #ac0731, #72112b, #3b111c, #000000);
+  }
+
+.section__wrapper {
+  padding-top: 10px;
+}
+
+.movie__icon {
+  opacity: .7;
+}

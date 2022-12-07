@@ -1,0 +1,32 @@
+<header>
+    <app-nav-bar></app-nav-bar>
+    <div class="container-video">
+        <div id="page-title">KinoBank</div>
+        <video id="myVideo" autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true">
+            <source src="lib/vid/headerbackgroundvideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="header__bottom-shadow"></div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="section__wrapper">
+      <div class="content__section-header"><i class="movie__icon fa-solid fa-film"></i> Tv-Series</div>
+      <movie-section movieType="2"></movie-section>
+    </div>
+    <div class="section__wrapper">
+      <div class="content__section-header"><i class="movie__icon fa-solid fa-film"></i> Cartoons</div>
+      <movie-section movieType="3"></movie-section>
+    </div>
+    <div class="section__wrapper">
+      <div class="content__section-header"><i class="movie__icon fa-solid fa-film"></i> Anime</div>
+      <movie-section movieType="4"></movie-section>
+    </div>
+    <div class="section__wrapper">
+      <div class="content__section-header"><i class="movie__icon fa-solid fa-film"></i> Films</div>
+      <movie-section movieType="1"></movie-section>
+    </div>
+  </div>
+</main>

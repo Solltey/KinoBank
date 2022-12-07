@@ -1,0 +1,152 @@
+﻿.spinners-wrapper {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.spinners {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forward {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #000;
+    border-color: var(--header-font-color) transparent var(--header-font-color) transparent;
+    animation: preloader-anim 30s infinite reverse;
+}
+
+.backwards {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #000;
+    border-color: var(--header-font-color) transparent var(--header-font-color) transparent;
+    animation: preloader-anim 30s infinite;
+}
+
+#spinner1 {
+    width: 6.55vw;
+    height: 6.55vw;
+}
+
+#spinner2 {
+    width: 7.65vw;
+    height: 7.65vw;
+}
+
+#spinner3 {
+    width: 8.75vw;
+    height: 8.75vw;
+}
+
+#spinner4 {
+    width: 9.85vw;
+    height: 9.85vw;
+}
+
+#spinner5 {
+    width: 10.95vw;
+    height: 10.95vw;
+}
+
+#spinner6 {
+    width: 12.05vw;
+    height: 12.05vw;
+}
+
+#spinner7 {
+    width: 13.15vw;
+    height: 13.15vw;
+}
+
+#spinner8 {
+    width: 14.25vw;
+    height: 14.25vw;
+}
+
+#spinner9 {
+    width: 15.35vw;
+    height: 15.35vw;
+}
+
+
+#status-code {
+    margin-right: .28vw;
+    position: absolute;
+    font-weight: 800;
+    font-size: 3vw;
+    color: var(--header-font-color);
+}
+
+#error-label {
+    top: 29vh;
+    margin-right: .28vw;
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.85vw;
+    color: var(--header-font-color);
+}
+
+#error-message {
+    bottom: 30vh;
+    margin-right: .28vw;
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.45vw;
+    color: var(--header-font-color);
+}
+
+@keyframes scale-anim {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: .65;
+        transform: scale(.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: .65;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes preloader-anim {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    60% {
+        opacity: 0;
+        transform: rotate(270deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(1800deg);
+    }
+}

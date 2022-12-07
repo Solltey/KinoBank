@@ -1,0 +1,10 @@
+<div (click)="close()" class="wrapper">
+  <div (click)="$event.stopPropagation()" class="container">
+    <button (click)="close()" class="close__button base__button" type="button">
+      <i class="close__icon fa-solid fa-xmark"></i>
+    </button>
+    <button (click)="previousImage()" class="preious__button base__button" type="button"><i class="change-image__icon fa-solid fa-angle-left"></i></button>
+    <button (click)="nextImage()" class="next__button base__button" type="button"><i class="change-image__icon fa-solid fa-angle-right"></i></button>
+    <img class="image-gallery" [src]="imageUrls[currentImage]" />
+  </div>
+</div>

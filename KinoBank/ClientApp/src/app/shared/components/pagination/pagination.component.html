@@ -1,0 +1,19 @@
+<div  *ngIf="pages.length > 1" class="pages-wrapper">
+    <div class="pagination-wrapper">
+        <button [class.disabled-button]="currentPage == 1" type="button" (click)="changePage(currentPage-1)" class="btn-pagination"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <button class="btn-pagination" type="button"
+                [class.active]="currentPage == 1"
+                (click)="changePage(1)">
+            1
+        </button>
+        <span class="dots">...</span>
+        <button *ngFor="let page of pages" class="btn-pagination" type="button"
+                [class.active]="currentPage == page"
+                (click)="changePage(page!)">
+            {{page}}
+        </button>
+        <span class="dots">...</span>
+        <button [class.disabled-button]="currentPage == lastPage" type="button" (click)="changePage(currentPage+1)" class="btn-pagination"><i class="fa-solid fa-arrow-right-long"></i></button>
+    </div>
+    <div class="pages-info">{{currentPage}} of {{lastPage}} pages</div>
+</div>

@@ -1,0 +1,13 @@
+.skeleton-movie__title {
+  margin-top: 10px;
+  padding-left: 7px;
+}
+
+.skeleton-movie__year {
+  margin-top: 5px;
+  padding-left: 7px;
+}
+
+.skeleton-movie {
+  margin: 10px;
+}

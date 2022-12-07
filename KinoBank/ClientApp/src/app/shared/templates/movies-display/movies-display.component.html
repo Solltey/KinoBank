@@ -1,0 +1,21 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="movies" *ngIf="movies != null; else waitingForData">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+  </div>
+  <app-pagination (changePageEvent)="changePage($event)"></app-pagination>
+</div>
+
+<ng-template #waitingForData>
+  <div class="movies">
+    <movie-card-preloader *ngFor="let item of [].constructor(20); let i = index"></movie-card-preloader>
+    <div class="skeleton-pages-wrapper">
+      <div class="skeleton-pagination-wrapper">
+        <skeleton-loader height="25" width="255"></skeleton-loader>
+      </div>
+      <div class="skeleton-pages-info">
+        <skeleton-loader height="20" width="75"></skeleton-loader>
+      </div>
+    </div>
+  </div>
+</ng-template>

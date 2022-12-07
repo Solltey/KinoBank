@@ -1,0 +1,93 @@
+<div *ngIf="loaderService.isLoading | async" class="loader-container">
+  <mat-progress-bar class="app-progress-bar" mode="indeterminate"></mat-progress-bar>
+</div>
+
+<nav class="navigation">
+  <div class="navigation__container">
+    <a id="kb-logo" class="navigation__nav-element" routerLink="/home">
+      <svg class="kb-logo-svg" width="10" height="20" viewBox="0 0 130 245" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M61.7255 148.396L33.2212 107.33L128.274 1H86.3862L33.2212 75.1088V1H1V209.987L33.2212 177.306V145.995L44.1586 166.213L61.7255 148.396ZM56.8758 189.721L76.5553 169.76L104.433 209.924L80.7826 233.912L56.8758 189.721ZM106.769 244.27L119.389 231.47L128.274 244.27H106.769ZM33.2212 213.713L3.09315 244.27H33.2212V213.713Z" fill="#E6002E" />
+        <path d="M33.2212 107.33L32.8484 106.997L32.5855 107.291L32.8105 107.615L33.2212 107.33ZM61.7255 148.396L62.0816 148.747L62.3728 148.451L62.1363 148.11L61.7255 148.396ZM128.274 1L128.647 1.33323L129.391 0.5H128.274V1ZM86.3862 1V0.5H86.1296L85.98 0.708546L86.3862 1ZM33.2212 75.1088H32.7212V76.6635L33.6275 75.4003L33.2212 75.1088ZM33.2212 1H33.7212V0.5H33.2212V1ZM1 1V0.5H0.5V1H1ZM1 209.987H0.5V211.206L1.35605 210.338L1 209.987ZM33.2212 177.306L33.5773 177.657L33.7212 177.511V177.306H33.2212ZM33.2212 145.995L33.661 145.758L32.7212 145.995H33.2212ZM44.1586 166.213L43.7188 166.451L44.0403 167.045L44.5146 166.564L44.1586 166.213ZM76.5553 169.76L76.9661 169.475L76.6224 168.98L76.1993 169.409L76.5553 169.76ZM56.8758 189.721L56.5197 189.37L56.26 189.633L56.436 189.959L56.8758 189.721ZM104.433 209.924L104.789 210.275L105.081 209.98L104.844 209.639L104.433 209.924ZM80.7826 233.912L80.3428 234.15L80.6643 234.744L81.1386 234.263L80.7826 233.912ZM119.389 231.47L119.8 231.185L119.456 230.69L119.033 231.119L119.389 231.47ZM106.769 244.27L106.413 243.919L105.574 244.77H106.769V244.27ZM128.274 244.27V244.77H129.23L128.685 243.985L128.274 244.27ZM3.09315 244.27L2.7371 243.919L1.89802 244.77H3.09315V244.27ZM33.2212 213.713H33.7212V212.493L32.8652 213.361L33.2212 213.713ZM33.2212 244.27V244.77H33.7212V244.27H33.2212ZM32.8105 107.615L61.3148 148.681L62.1363 148.11L33.632 107.045L32.8105 107.615ZM127.901 0.666768L32.8484 106.997L33.594 107.663L128.647 1.33323L127.901 0.666768ZM86.3862 1.5H128.274V0.5H86.3862V1.5ZM33.6275 75.4003L86.7925 1.29145L85.98 0.708546L32.8149 74.8174L33.6275 75.4003ZM32.7212 1V75.1088H33.7212V1H32.7212ZM1 1.5H33.2212V0.5H1V1.5ZM1.5 209.987V1H0.5V209.987H1.5ZM32.8652 176.955L0.643953 209.636L1.35605 210.338L33.5773 177.657L32.8652 176.955ZM32.7212 145.995V177.306H33.7212V145.995H32.7212ZM44.5983 165.975L33.661 145.758L32.7814 146.233L43.7188 166.451L44.5983 165.975ZM61.3695 148.045L43.8025 165.862L44.5146 166.564L62.0816 148.747L61.3695 148.045ZM76.1993 169.409L56.5197 189.37L57.2318 190.072L76.9114 170.112L76.1993 169.409ZM104.844 209.639L76.9661 169.475L76.1446 170.046L104.023 210.209L104.844 209.639ZM81.1386 234.263L104.789 210.275L104.077 209.573L80.4265 233.561L81.1386 234.263ZM56.436 189.959L80.3428 234.15L81.2223 233.674L57.3156 189.483L56.436 189.959ZM119.033 231.119L106.413 243.919L107.125 244.621L119.745 231.821L119.033 231.119ZM128.685 243.985L119.8 231.185L118.978 231.755L127.863 244.555L128.685 243.985ZM106.769 244.77H128.274V243.77H106.769V244.77ZM3.44919 244.621L33.5773 214.064L32.8652 213.361L2.7371 243.919L3.44919 244.621ZM33.2212 243.77H3.09315V244.77H33.2212V243.77ZM32.7212 213.713V244.27H33.7212V213.713H32.7212Z" fill="black" />
+      </svg>
+      <span>ino</span>
+      <svg class="kb-logo-svg" width="10" height="20" viewBox="0 0 146 246" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3869 1H1V53.1197L52.3869 1ZM87.1217 107.33L1 194.68V244.27L128.274 107.33H87.1217ZM1 157.965L50.923 107.33H28.388L144.384 1H88.2813L1 89.5259V157.965Z" fill="#E6002E" />
+        <path d="M1 1V0.5H0.5V1H1ZM52.3869 1L52.743 1.35104L53.582 0.5H52.3869V1ZM1 53.1197H0.5V54.339L1.35605 53.4707L1 53.1197ZM1 194.68L0.643953 194.329L0.5 194.475V194.68H1ZM87.1217 107.33V106.83H86.9126L86.7657 106.979L87.1217 107.33ZM1 244.27H0.5V245.543L1.36624 244.611L1 244.27ZM128.274 107.33L128.64 107.67L129.421 106.83H128.274V107.33ZM50.923 107.33L51.279 107.681L52.1181 106.83H50.923V107.33ZM1 157.965H0.5V159.184L1.35605 158.316L1 157.965ZM28.388 107.33L28.0502 106.961L27.1026 107.83H28.388V107.33ZM144.384 1L144.722 1.36858L145.67 0.5H144.384V1ZM88.2813 1V0.5H88.0721L87.9252 0.648958L88.2813 1ZM1 89.5259L0.643953 89.1749L0.5 89.3209V89.5259H1ZM1 1.5H52.3869V0.5H1V1.5ZM1.5 53.1197V1H0.5V53.1197H1.5ZM52.0309 0.648958L0.643953 52.7687L1.35605 53.4707L52.743 1.35104L52.0309 0.648958ZM1.35605 195.031L87.4778 107.681L86.7657 106.979L0.643953 194.329L1.35605 195.031ZM1.5 244.27V194.68H0.5V244.27H1.5ZM127.908 106.99L0.633757 243.93L1.36624 244.611L128.64 107.67L127.908 106.99ZM87.1217 107.83H128.274V106.83H87.1217V107.83ZM50.5669 106.979L0.643953 157.614L1.35605 158.316L51.279 107.681L50.5669 106.979ZM28.388 107.83H50.923V106.83H28.388V107.83ZM144.047 0.631423L28.0502 106.961L28.7259 107.699L144.722 1.36858L144.047 0.631423ZM88.2813 1.5H144.384V0.5H88.2813V1.5ZM1.35605 89.877L88.6373 1.35104L87.9252 0.648958L0.643953 89.1749L1.35605 89.877ZM1.5 157.965V89.5259H0.5V157.965H1.5Z" fill="black" />
+      </svg>
+      <span>ank</span>
+    </a>
+    <div class="search-container">
+      <input #searchBar (keyup.enter)="searchByKeywords(searchBar.value)" type="text"
+             name="search" placeholder="Search..." class="search-input">
+      <a (click)="searchByKeywords(searchBar.value)" class="search-btn">
+        <i class="fas fa-search fa-lg"></i>
+        <i class="fa-solid fa-arrow-right-long fa-lg"></i>
+      </a>
+    </div>
+    <ul class="menu-area">
+      <li class="menu-item" [class.films-active]="typeNumber == 1">
+        <a class="navigation__nav-element movies-btn" routerLink="/films">
+          Films <i class="fa-solid fa-chevron-down fa-sm"></i>
+        </a>
+        <div id="films__dropdown" class="dropdown-menu">
+          <div class="outter">
+            <div class="inner">
+              <a *ngFor="let genre of genres[0]; index as i" class="menu__genre" [routerLink]="['/films', i]">{{genre | titlecase}}</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item" [class.tv-series-active]="typeNumber == 2">
+        <a class="navigation__nav-element movies-btn" routerLink="/tv-series">
+          TV-Series <i class="fa-solid fa-chevron-down fa-sm"></i>
+        </a>
+        <div id="tv-series__dropdown" class="dropdown-menu">
+          <div class="outter">
+            <div class="inner">
+              <a *ngFor="let genre of genres[1]; index as i" class="menu__genre" [routerLink]="['/tv-series', i]">{{genre | titlecase}}</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item" [class.cartoons-active]="typeNumber == 3">
+        <a class="navigation__nav-element movies-btn" routerLink="/cartoons">
+          Cartoons <i class="fa-solid fa-chevron-down fa-sm"></i>
+        </a>
+        <div id="cartoons__dropdown" class="dropdown-menu">
+          <div class="outter">
+            <div class="inner">
+              <a *ngFor="let genre of genres[2]; index as i" class="menu__genre" [routerLink]="['/cartoons', i]">{{genre | titlecase}}</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item" [class.anime-active]="typeNumber == 4">
+        <a class="navigation__nav-element movies-btn" routerLink="/anime">
+          Anime <i class="fa-solid fa-chevron-down fa-sm"></i>
+        </a>
+        <div id="anime__dropdown" class="dropdown-menu">
+          <div class="outter">
+            <div class="inner">
+              <a *ngFor="let genre of genres[3]; index as i" class="menu__genre" [routerLink]="['/anime', i]">{{genre | titlecase}}</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li *ngIf="!isLoggedIn" class="menu-item login-btn">
+        <a id="login-btn" class="navigation__nav-element" routerLink="/login">
+          <i class="fa-regular fa-circle-user"></i>
+          Login
+        </a>
+      </li>
+      <li *ngIf="isLoggedIn" class="logout__button menu-item">
+        <a class="logout__btn navigation__nav-element" routerLink="/home"
+           (click)="onLogout()">
+          Logout
+          <i class="logout__icon fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+      </li>
+      <div class="animation"></div>
+      <div class="background-blocker"></div>
+    </ul>
+  </div>
+</nav>

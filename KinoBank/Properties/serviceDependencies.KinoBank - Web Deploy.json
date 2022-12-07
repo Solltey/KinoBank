@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/kinobank/databases/kinobankdb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:Identity",
+      "dynamicId": null
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "ClientApp/src/app/shared/components/nav-bar/nav-bar.component.min.css",
+    "inputFiles": [
+      "ClientApp/src/app/shared/components/nav-bar/nav-bar.component.css"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\bin\Debug\netcoreapp3.1\KinoBank.Domain.deps.json
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\bin\Debug\netcoreapp3.1\KinoBank.Domain.dll
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\bin\Debug\netcoreapp3.1\KinoBank.Domain.pdb
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.csproj.AssemblyReference.cache
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.AssemblyInfoInputs.cache
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.AssemblyInfo.cs
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.dll
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Domain\obj\Debug\netcoreapp3.1\KinoBank.Domain.pdb

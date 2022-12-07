@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KinoBank Email Confirmation</title>
+<style type="text/css">
+	body {
+		margin: 0;
+		color: white;
+	}
+	table {
+		border-spacing: 0;
+	}
+	td {
+		padding: 0;
+	}
+	img {
+		border: 0;
+	}
+	.wrapper{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+	.email-body{
+	width: 655px;
+		padding: 35px 0;
+		margin: auto;
+		background-color: black;
+	}
+	.main{
+		background-color: #070707;
+	}
+	.confirm-button__container{
+		height: 2rem;
+		position: relative;
+		padding: 25px;
+	}
+	.confirm-button{
+		color: #e6002e !important;
+		text-align: center;
+		display: block;
+		margin: auto;
+		width: 25%;
+		text-decoration: none;
+		background-color: black;
+		border: 1px solid #e6002e;
+		border-radius: 3px;
+		padding: 5px 15px;
+		font-size: 1.15rem;
+	}
+	.header,
+	.main,
+	.footer,
+	.cheers__wrapper{
+		padding: 0 30px;
+	}
+	.logo{
+		width: 5rem;
+	}
+	.main{
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}
+	.footer{
+		padding-top: 45px;
+	}
+	.date-time{
+		margin: 0 0 35px 0;
+		color: white;
+	}
+	h1{
+		color: #e6002e;
+		margin-bottom: 5px;
+	}
+
+	h2{
+		color: #fff;
+	}
+	.tip__text{
+		margin-top: .35rem;
+	}
+	.greetings{
+		color: #fff;
+	}
+	.gratitude{
+	    margin-bottom: 15px;
+		color: white;
+	}
+	.keepcredentials__tip{
+		margin-top: 15px;
+		color: #fff;
+	}
+	.credentials__label{
+		color: white;
+	}
+	.credentials__value{
+		color: #e6002e;
+	}
+	.cheers{
+		margin-top: 25px;
+		padding-left: 15px;
+		border-left: 1px solid #e6002e;
+	}
+	.password__tip,
+	.tip__text,
+	.cheers{
+		color: white;
+	}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="email-body">
+			<div class="header">
+				<a href="" target="_blank"><img class="logo" src="https://iili.io/ibI72I.png"/></a>
+				<h1>Confirm Account Registration</h1>
+				<div class="date-time">{dateTime}</div>
+			</div>
+			<div class="main">
+				<h2>Congratulations! You are registered.</h2>
+				<div class="greetings">Dear {username},</div>
+				<div class="gratitude">Thank you for showing your interest in our website. All you need to do to confirm your account is click the button below.</div>
+				<div class="confirm-button__container">
+					<a href="{confirmationLink}" class="confirm-button">Confirm Email</a>
+				</div>
+				<div class="keepcredentials__tip">Please keep your credentials confidential for future use.</div>
+				<div class="credentials"><span class="credentials__label">Username: </span><span class="credentials__value">{username}</span></div>
+				<div class="credentials"><span class="credentials__label">Email: </span><span class="credentials__value">{email}</span></div>
+			</div>
+			<div class="footer">
+				<div class="password__tip">
+					Update your password now every few months!
+				</div>
+				<div class="tip__text">
+					Weak passwords get stolen and lead to hacked accounts.
+				</div>
+			</div>
+				<div class="cheers__wrapper">
+					<div class="cheers">
+						Cheers,
+						The KinoBank Team
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

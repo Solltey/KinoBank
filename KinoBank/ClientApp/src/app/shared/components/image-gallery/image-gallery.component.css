@@ -1,0 +1,84 @@
+.body {
+  overflow: hidden;
+}
+
+.wrapper {
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, .6);
+  z-index: 250;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.image-gallery {
+  max-height: 75vh;
+  max-width: 75vw;
+  object-fit: contain;
+  border-radius: 1%;
+  border: 2px solid black;
+  animation: appearance-anim .45s ease-out;
+}
+
+@keyframes appearance-anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.base__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  position: absolute;
+}
+
+  .base__button:hover {
+    background-color: rgba(21, 21, 21, .6);
+  }
+
+.close__button {
+    border: none;
+    background-color: transparent;
+  z-index: 255;
+  width: 75px;
+  height: 75px;
+  top: 0;
+  right: 0;
+}
+
+.preious__button {
+  width: 75px;
+  height: 55vh;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next__button {
+  width: 75px;
+  height: 55vh;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close__icon {
+  color: white;
+  font-size: 40px;
+}
+
+.change-image__icon {
+  color: white;
+  font-size: 35px;
+}

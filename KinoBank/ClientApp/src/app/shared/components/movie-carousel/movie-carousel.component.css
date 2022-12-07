@@ -1,0 +1,68 @@
+.carousel-main {
+  position: relative;
+  width: 768px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.carousel-btn {
+  cursor: pointer;
+  border-radius: 5%;
+  padding: 7px;
+  background-color: black;
+  border: 1px solid white;
+  z-index: 10;
+  position: absolute;
+  top: 40%;
+  transition: all .25s;
+}
+
+  .carousel-btn:active {
+    opacity: .15;
+  }
+
+  .carousel-btn:hover {
+    border-color: var(--header-font-color);
+  }
+
+    .carousel-btn:hover .fa-solid {
+      color: var(--header-font-color);
+    }
+
+.fa-solid {
+  transition: all .25s;
+}
+
+  .fa-solid.fa-angles-right,
+  .fa-solid.fa-angles-left {
+    color: white;
+  }
+
+#next {
+  right: 0px;
+  border-right: none;
+}
+
+#prev {
+  left: 13px;
+  border-left: none;
+}
+
+.movies {
+  display: flex;
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.movie {
+  margin: 5px;
+  animation: appearance .5s ease-out;
+}

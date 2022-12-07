@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+/*-----Resetting styles-----*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+ul,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+  ul[class],
+  ol[class] {
+    padding: 0;
+    list-style: none;
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: #090909;
+  letter-spacing: .01rem;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+/*-----Scrollbar-----*/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: .1;
+  background: #4d4d4d;
+  border-radius: 35px;
+}
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #949494;
+  }
+
+
+
+/*-----Variables-----*/
+
+:root {
+  --very-good-rating-gradient: linear-gradient(to right bottom, #054900, #055000, #065700, #065e00, #076500, #087300, #098100, #0a9000, #0dab00, #0fc600, #11e200, #12ff00);
+  --good-rating-gradient: linear-gradient(to right bottom, #0a6031, #0a6535, #0a6939, #0a6e3e, #097342, #097a47, #09804d, #088752, #08915a, #069a63, #04a46b, #00ae74);
+  --normal-rating-gradient: linear-gradient(to right bottom, #a14600, #a64800, #ab4b00, #b14d00, #b65000, #be5300, #c55700, #cd5a00, #d95f00, #e66500, #f26a00, #ff7000);
+  --bad-rating-gradient: linear-gradient(to right bottom, #670000, #700001, #790001, #830001, #8c0001, #940001, #9c0001, #a40001, #ac0001, #b40001, #bc0001, #c40000);
+  --header-font-color: #e6002e;
+  --link-text: #a3a3a3;
+}

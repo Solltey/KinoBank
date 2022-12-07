@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="screen">
+    <div *ngIf="loaderService.isLoading | async" class="loader-container">
+      <mat-progress-bar class="app-progress-bar" mode="indeterminate"></mat-progress-bar>
+    </div>
+    <div class="screen__content">
+      <form class="login" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="login__field">
+          <i class="login__icon fa-solid fa-envelope"></i>
+          <input type="text"
+                 class="login__input"
+                 placeholder="Email"
+                 formControlName="email">
+        </div>
+        <div class="login__field">
+          <i class="login__icon fas fa-lock"></i>
+          <input [type]="hide ? 'password' : 'text'"
+                 class="login__input"
+                 formControlName="password"
+                 placeholder="Password">
+          <i *ngIf="!hide" (click)="hide = !hide" class="eye-icon fa-solid fa-eye-slash"></i>
+          <i *ngIf="hide" (click)="hide = !hide" class="eye-icon fa-solid fa-eye"></i>
+        </div>
+        <button class="button base-btn login__submit" [disabled]="form.invalid"
+                type="submit">
+          <span class="button__text">Log In</span>
+          <i class="button__icon fa-solid fa-chevron-right"></i>
+        </button>
+        <button type="button" class="button base-btn registration" routerLink="/registration">
+          <span class="button__text">Create Account</span>
+          <i class="button__icon fa-solid fa-chevron-right"></i>
+        </button>
+        <button type="button" class="button base-btn back" routerLink="/home">
+          <i class="button-back__icon fa-solid fa-chevron-left"></i>
+          <span class="button__text">Back</span>
+        </button>
+      </form>
+      <div class="social-login">
+        <h3>log in via</h3>
+        <div class="social-icons">
+          <a href="#" class="social-login__icon fa-brands fa-google"></a>
+          <a href="#" class="social-login__icon fab fa-facebook"></a>
+          <a href="#" class="social-login__icon fab fa-twitter"></a>
+        </div>
+      </div>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+    <div *ngIf="form.touched" class="errors-screen">
+      <div class="errors">
+        <div class="error" *ngIf="loginResult && !loginResult.success"><strong>ERROR</strong>: {{loginResult.message}}</div>
+        <div class="error" *ngFor="let error of getErrors(form.get('email')!, 'Email')">
+          <i class="error__icon fa-solid fa-xmark"></i> {{error}}
+        </div>
+        <div class="error" *ngFor="let error of getErrors(form.get('password')!, 'Password')">
+          <i class="error__icon fa-solid fa-xmark"></i> {{error}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

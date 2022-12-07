@@ -1,0 +1,125 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.27" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\authentication\login\login.component.ts" />
+    <None Remove="ClientApp\src\app\authentication\registration\registration.component.ts" />
+    <None Remove="ClientApp\src\app\material.module.ts" />
+    <None Remove="ClientApp\src\app\shared\components\base-form.component.ts" />
+    <None Remove="ClientApp\src\app\shared\components\image-gallery\image-gallery.component.ts" />
+    <None Remove="ClientApp\src\app\shared\components\movie-card-preloader\movie-card-preloader.component.ts" />
+    <None Remove="ClientApp\src\app\shared\components\movie-section\movie-section.component.ts" />
+    <None Remove="ClientApp\src\app\shared\components\skeleton-loader\skeleton-loader.component.ts" />
+    <None Remove="ClientApp\src\app\shared\models\authentication\authentication.service.ts" />
+    <None Remove="ClientApp\src\app\shared\models\authentication\login-request.interface.ts" />
+    <None Remove="ClientApp\src\app\shared\models\authentication\login-result.interface.ts" />
+    <None Remove="ClientApp\src\app\shared\models\authentication\registration-request.interface.ts" />
+    <None Remove="ClientApp\src\app\shared\models\authentication\registration-result.interface.ts" />
+    <None Remove="ClientApp\src\app\shared\pipes\social-media-number.pipe.ts" />
+    <None Remove="ClientApp\src\app\shared\services\auth.guard.ts" />
+    <None Remove="ClientApp\src\app\shared\services\http-interceptors\auth-interceptor.service.ts" />
+    <None Remove="ClientApp\src\app\shared\services\http-interceptors\loader-interceptor.service.ts" />
+    <None Remove="ClientApp\src\app\shared\services\loader\loader.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\EmailTemplates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KinoBank.Domain\KinoBank.Domain.csproj" />
+    <ProjectReference Include="..\KinoBank.Infrastructure\KinoBank.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\authentication\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\components\base-form.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\authentication\login-request.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\authentication\login-result.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\auth.guard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\authentication.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\http-interceptors\auth-interceptor.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\http-interceptors\loader-interceptor.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\loader\loader.service.ts" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
+  </PropertyGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

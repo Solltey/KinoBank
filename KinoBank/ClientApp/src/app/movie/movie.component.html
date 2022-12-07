@@ -1,0 +1,84 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+  <div class="main">
+    <div class="info__wrapper">
+      <div class="skeleton__poster">
+        <skeleton-loader [style.display]="posterLoaded ? 'none' : 'block'" height="337" width="225"></skeleton-loader>
+      </div>
+      <img [style.display]="posterLoaded ? 'block' : 'none'" (load)="posterLoaded = true" class="movie__cover" src="{{movieDetails?.poster?.url}}" />
+      <div class="movie__info-table">
+        <div>
+          <div class="movie-title">{{movieDetails?.name}}</div>
+          <div class="movie-alt-title">{{movieDetails?.alternativeName}}</div>
+        </div>
+        <div class="ratings__info info__label-value">
+          <div class="kp_rating">
+            <div>
+              <span style="color: var(--header-font-color);">KP </span>
+              <span style="font-style: italic; color: #fff">{{movieDetails?.rating?.kp | number : '1.0-1'}}</span>
+            </div><div class="votes-number"><span style="color: #fff">{{movieDetails?.votes?.kp | socialMediaNumber}}</span> votes</div>
+          </div>
+          <div class="imdb_rating">
+            <div>
+              <span style="color: var(--header-font-color);">IMDB </span>
+              <span style="font-style: italic; color: #fff">{{movieDetails?.rating?.imdb | number : '1.0-1'}}</span>
+            </div><div class="votes-number"><span style="color: #fff">{{movieDetails?.votes?.imdb | socialMediaNumber}}</span> votes</div>
+          </div>
+        </div>
+        <div class="info__label-wrapper">
+          <div class="info__label">Country:</div>
+          <div class="info__label-value"><span *ngFor="let country of movieDetails?.countries">{{country?.name}} </span></div>
+        </div>
+        <div class="info__label-wrapper">
+          <div class="info__label">Year:</div>
+          <div class="info__label-value">{{movieDetails?.year}}</div>
+        </div>
+        <div class="info__label-wrapper">
+          <div class="info__label">Length:</div>
+          <div class="info__label-value">{{movieDetails?.movieLength}} min.</div>
+        </div>
+        <div *ngIf="movieDetails?.ageRating" class="info__label-wrapper">
+          <div class="info__label">Age:</div>
+          <div class="info__label-value">{{movieDetails?.ageRating}}+</div>
+        </div>
+        <div class="info__label-wrapper">
+          <div class="info__label">Genres:</div>
+          <div class="info__label-value"><span *ngFor="let genre of movieDetails?.genres">{{genre?.name | titlecase}} </span></div>
+        </div>
+        <div class="info__label-wrapper">
+          <div class="info__label">Tagline:</div>
+          <div class="info__label-value">{{movieDetails?.slogan}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="description-container">
+      <h2>Description:</h2>
+      <div class="movie__decription">
+        {{movieDetails?.description}}
+      </div>
+    </div>
+    <div *ngIf="movieImages?.length! > 0">
+      <button class="show-images__button" type="button" (click)="showImages = !showImages">Images<i [class.rotate-dropdown__icon]="showImages" class="dropdown__icon fa-solid fa-chevron-down fa-sm"></i></button>
+      <div [class.expand-images]="showImages" class="movie-images__container">
+        <div [style.display]="imagesLoaded ? 'flex' : 'none'" class="movie__images">
+          <image-gallery *ngIf="showGallery" (closeGallery)="closeGallerry($event)" [currentImage]="currentImage" [imageUrls]="galleryImages"></image-gallery>
+          <div *ngFor="let movieImage of movieImages; index as i" class="image__wrapper">
+            <img (click)="getGallery(i)"
+                 [src]="movieImage" class="movie__image" (load)="imagesLoaded=true" />
+            <i class="image__icon fa-solid fa-magnifying-glass" (click)="getGallery(i)"></i>
+          </div>
+        </div>
+        <div *ngIf="!imagesLoaded" class="movie__images" style="padding: 6px 0 5px 15px;">
+          <skeleton-loader *ngFor="let item of [].constructor(10); let i = index" style="margin-left: 10px;display: inline-block;" height="140" width="148"></skeleton-loader>
+        </div>
+      </div>
+    </div>
+    <app-player></app-player>
+    <div class="similars-container" *ngIf="movieDetails?.similarMovies?.length! > 0">
+      <h2>Similars:</h2>
+      <div class="carousel-wrapper">
+        <movie-carousel [movies]="movieDetails?.similarMovies"></movie-carousel>
+      </div>
+    </div>
+  </div>
+</div>

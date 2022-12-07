@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+  padding-top: 55px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sorting-container {
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.sorting-label {
+  font-size: 1.1rem;
+  color: darkred;
+}
+
+.sorting-option {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 7px;
+  color: white;
+}
+
+.active {
+  color: gray;
+}
+
+.sorting-option:hover {
+  color: dimgray;
+}
+
+.skeleton-pages-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skeleton-pages-info {
+  font-size: .75rem;
+  color: white;
+  width: 100%;
+  margin: .5rem 0 .75rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skeleton-pagination-wrapper {
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}

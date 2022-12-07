@@ -1,0 +1,19 @@
+
+<div class="movie-section">
+  <div class="buttons_wrapper">
+    <button class="order-button" type="button" (click)="changeOrder(1)" [disabled]="orderType == 1">Popular</button>
+    <button class="order-button" type="button" (click)="changeOrder(2)"  [disabled]="orderType == 2">New</button>
+    <button class="order-button" type="button" (click)="changeOrder(3)"  [disabled]="orderType == 3">Rating</button>
+  </div>
+  <div class="movie__wrapper" *ngIf="movies != null; else waitingForData" [ngStyle]="{'max-height': isWrapperOpen ? '1500px' : '300px'}">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+    <button class="open-wrapper__button" type="button" (click)="isWrapperOpen=!isWrapperOpen"><i [class.dropdown-rotate]="isWrapperOpen" class="dropdown__icon fa-solid fa-chevron-down fa-sm"></i></button>
+  </div>
+</div>
+
+<ng-template #waitingForData>
+  <div class="movie__wrapper" [ngStyle]="{'max-height': isWrapperOpen ? '1500px' : '300px'}">
+    <movie-card-preloader *ngFor="let item of [].constructor(16); let i = index"></movie-card-preloader>
+    <button class="open-wrapper__button" type="button" (click)="isWrapperOpen=!isWrapperOpen"><i [class.dropdown-rotate]="isWrapperOpen" class="dropdown__icon fa-solid fa-chevron-down fa-sm"></i></button>
+  </div>
+</ng-template>

@@ -1,0 +1,18 @@
+<div class="movie">
+  <a class="movie__cover-inner" [routerLink]="['/movies', movie.id]">
+    <skeleton-loader *ngIf="!posterLoaded" height="250" width="165"></skeleton-loader>
+    <div [style.display]="posterLoaded ? 'block' : 'none'">
+      <img (load)="posterLoaded = true" class="movie__cover" [src]="movie.poster?.previewUrl" alt="">
+      <div class="movie__cover--darkened">
+        <i class="play__icon fa-regular fa-circle-play"></i>
+      </div>
+    </div>
+  </a>
+  <div class="movie__info">
+    <div *ngIf="movie.rating?.kp" class="movie__rating" #ratingBg>{{movie.rating?.kp | number : '1.0-1'}}</div>
+    <a [routerLink]="['/movies', movie.id]" class="movie__title">{{movie.name}}</a>
+    <div *ngIf="movie.year != null" class="movie__category">
+      <span class="year">{{movie.year}}</span>
+    </div>
+  </div>
+</div>

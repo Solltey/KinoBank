@@ -1,0 +1,13 @@
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\bin\Debug\netcoreapp3.1\KinoBank.Infrastructure.deps.json
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\bin\Debug\netcoreapp3.1\KinoBank.Infrastructure.dll
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\bin\Debug\netcoreapp3.1\KinoBank.Infrastructure.pdb
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.AssemblyInfo.cs
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.dll
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.pdb
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\bin\Debug\netcoreapp3.1\KinoBank.Infrastructure.runtimeconfig.json
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\bin\Debug\netcoreapp3.1\KinoBank.Infrastructure.runtimeconfig.dev.json
+C:\Users\Solltey\Desktop\KinoBank\KinoBank.Infrastructure\obj\Debug\netcoreapp3.1\KinoBank.Infrastructure.genruntimeconfig.cache
