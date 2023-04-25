@@ -1,1 +1,1 @@
-Web API won't work without VPN.
+Web API doesn't work without VPN.
